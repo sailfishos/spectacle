@@ -19,28 +19,18 @@ Three separated tools will be installed:
 ### Instruction
 Several methods available for spectacle installation:
 
-* rpm/deb packages for several supported Linux distributions
-
-    From [MeeGo Repos](http://repo.meego.com/tools/repo/), repo urls can be found for:
-
-    * MeeGo
-    * Fedora 10,11,12
-    * openSUSE(s)
-    * xUbuntu 8.10/9.04/9.10
-    * Debian 5.0
-
 * Download the latest source package, and install it by ``make install``
 
     (Only running ``setup.py install`` is not enough!)
 
     The latest code in git tree can be accessed at:
-    [git tree](git://gitorious.org/meego-developer-tools/spectacle.git)
+    [git tree](https://github.com/sailfishos/spectacle)
 
 ### Requirements
-* python 2.x, above 2.5
+* python 3.x, above 3.6
 * PyYAML, the python module for YAML parsing
 * cheetah, one popular templating system for python
-  * In many linux distributions, the package may be named as python-cheetah.
+* UrlGrabber
 
 ## Usage
 ### specify
