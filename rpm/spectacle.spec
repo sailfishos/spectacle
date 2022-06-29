@@ -6,8 +6,8 @@ Release:    1
 Group:      Development/Tools
 License:    GPLv2+
 BuildArch:  noarch
-URL:        https://meego.gitorious.org/meego-developer-tools/spectacle
-Source0:    spectacle-%{version}.tar.gz
+URL:        https://github.com/sailfishos/spectacle
+Source0:    %{name}-%{version}.tar.gz
 Source1:    autospectacle.pl
 Requires:   python3-yaml
 Requires:   python3-urlgrabber
@@ -29,7 +29,6 @@ make tmpls
 %{py3_build}
 
 %install
-rm -rf %{buildroot}
 %{py3_install}
 
 make install-data DESTDIR=${RPM_BUILD_ROOT}
@@ -37,7 +36,8 @@ install -m 0755 %{SOURCE1} ${RPM_BUILD_ROOT}%{_bindir}
 
 %files
 %defattr(-,root,root,-)
-%doc README.md AUTHORS COPYING TODO
+%license COPYING
+%doc README.md AUTHORS TODO
 %doc examples/
 %dir %{_datadir}/spectacle
 %{_datadir}/spectacle/*
