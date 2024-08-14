@@ -22,7 +22,7 @@ ${pre}${value}${post}#slurp
 ###################
 ## Macros
 # >> macros
-#if "macros" in $extra.content and "main" in $extra.content
+#if "macros" in $extra.content and "main" in $extra.content.macros and $extra.content.macros.main
 $str_newline.join($extra.content.macros.main)
 #end if
 # << macros
