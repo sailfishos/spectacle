@@ -231,14 +231,14 @@ PATHMACROS = (('/usr/bin',     '%{_bindir}'),
 
 # Function to read config file to parser
 def read_config_file(configfile,config_parser = None):
-    from configparser import SafeConfigParser
+    from configparser import ConfigParser
     configfile = os.path.expanduser(configfile)
 
     if not os.path.exists(configfile):
         return None
     
     if not config_parser:
-        config_parser = SafeConfigParser()
+        config_parser = ConfigParser()
     
     config_parser.read(configfile)
     
