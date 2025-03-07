@@ -3,7 +3,6 @@ Name:       spectacle
 Summary:    RPM Spec file generator and management tool
 Version:    0.32
 Release:    1
-Group:      Development/Tools
 License:    GPLv2+
 BuildArch:  noarch
 URL:        https://github.com/sailfishos/spectacle
@@ -35,7 +34,6 @@ make install-data DESTDIR=${RPM_BUILD_ROOT}
 install -m 0755 %{SOURCE1} ${RPM_BUILD_ROOT}%{_bindir}
 
 %files
-%defattr(-,root,root,-)
 %license COPYING
 %doc README.md AUTHORS TODO
 %doc examples/
