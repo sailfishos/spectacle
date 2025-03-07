@@ -8,7 +8,7 @@ TEMPLATE_MODS=$(patsubst %.tmpl,%.py,$(TEMPLATES))
 all: $(TEMPLATE_MODS)
 
 %.py: %.tmpl
-	$(CHEETAH) compile --shbang="#!/usr/bin/env $(PYTHON)" --settings='useStackFrames=False' $<
+	$(CHEETAH) compile --shbang="#!/usr/bin/env $(PYTHON)" --settings='useStackFrames=False,addTimestampsToCompilerOutput=False' $<
 	cp $@ __init__.py
 
 clean:
