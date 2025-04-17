@@ -203,6 +203,9 @@ ARCHS = {'ix86': '%{ix86}',
          'armv5': 'armv5el armv5tel armv5tejl',
          'armv6': 'armv6l armv6hl',
          'armv7': 'armv7el armv7tel armv7l armv7hl armv7nhl armv7thl armv7tnhl',
+         'armv8': 'armv8l armv8hl armv8hnl armv8hcnl',
+         'arm64': 'aarch64',
+         'aarch64': 'aarch64'
         }
 
 # Different options for "Configure" yaml key.
