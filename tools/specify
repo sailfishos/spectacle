@@ -126,7 +126,13 @@ if __name__ == '__main__':
         # no YAML-path specified, search in CWD
         yamlls = glob.glob('*.yaml')
         if not yamlls:
-            logger.error('Cannot find valid spectacle file(*.yaml) in current directory, please specify one.')
+            logger.warning('Cannot find valid spectacle file(*.yaml) in current directory, looking in rpm/')
+            # not found, look in rpm/
+            yamlls = glob.glob('rpm/*.yaml')
+            if not yamlls:
+              logger.error('Cannot find valid spectacle file(*.yaml), please specify one.')
+            elif len(yamlls) > 1:
+                logger.error('Find multiple spectacle files(*.yaml), please specify one.')
         elif len(yamlls) > 1:
             logger.error('Find multiple spectacle files(*.yaml) in current directory, please specify one.')
 
