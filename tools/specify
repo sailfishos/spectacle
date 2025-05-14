@@ -47,7 +47,7 @@ def new_yaml(fpath):
     logger.info('New spectacle yaml file created: %s' % fpath)
     if logger.ask('Continue to edit the new file?'):
         if 'EDITOR' in os.environ:
-            editor = sys.environ['EDITOR']
+            editor = os.environ['EDITOR']
         else:
             editor = 'vi'
         os.system('%s %s' % (editor, fpath))
