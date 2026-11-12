@@ -68,7 +68,6 @@ def new_subpkg(fpath, sub):
         str_sub = '\nSubPackages:\n'
     str_sub +="""    - Name:  %s
       Summary: ^^^
-      Group: ^^^
 # Please replace all "^^^" with valid values, and cleanup this comment line.
 """ % sub
 

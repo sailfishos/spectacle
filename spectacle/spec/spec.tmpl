@@ -53,7 +53,6 @@ Epoch:      ${metadata.Epoch}
 #else
 #set $auto_depend = "%{version}-%{release}"
 #end if
-Group:      ${metadata.Group}
 License:    ${metadata.License}
 #if "ExclusiveArch" in $metadata
 ExclusiveArch:  ${metadata.ExclusiveArch}
@@ -189,8 +188,6 @@ License:    $sp.License
 #end if
 #if "Group" in $sp
 Group:      $sp.Group
-#else
-Group:      ${metadata.Group}
 #end if
 #if "Version" in $sp
 Version:    $sp.Version

@@ -223,7 +223,6 @@ The following keywords are mandatory for main package:
 * Summary
 * Description
 * Version
-* Group
 * License
 
 The following keywords are mandatory for sub-package:
@@ -231,7 +230,6 @@ The following keywords are mandatory for sub-package:
 * Name
 * Summary
 * Description
-* Group
 
 ### Valid keywords for sub-packages
 For sub-packages, only a subset of keywords can be specified:

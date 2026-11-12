@@ -413,7 +413,6 @@ sub print_devel
 	$printed_subpackages = 1;
 	print OUTFILE "    - Name: devel\n";
 	print OUTFILE "      Summary: Development components for the $name package\n";
-	print OUTFILE "      Group: Development/Libraries\n";
 
 	# remove dupes
 	undef %saw;
@@ -438,7 +437,6 @@ sub print_doc
 	}
 	print OUTFILE "    - Name: docs\n";
 	print OUTFILE "      Summary: Documentation components for the $name package\n";
-	print OUTFILE "      Group: Documentation\n";
 
 	# remove dupes
 	undef %saw;

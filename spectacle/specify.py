@@ -43,14 +43,12 @@ SERIES_PATH = 'series.conf'
 MAND_KEYS = ('Name',
              'Summary',
              'Version',
-             'Group',
              'License',
             )
 
 # Mandatory keys for subpackage
 SUB_MAND_KEYS = ('Name',
                  'Summary',
-                 'Group',
                 )
 
 # boolean keys with the default 'False' value
@@ -175,6 +173,7 @@ SUBAVAIL_KEYS = ('Name',
 DROP_KEYS = ('PostScripts',
              'Documents',
              'SupportOtherDistros',
+             'Group',
             )
 
 # Renamed keys.
@@ -336,26 +335,22 @@ class RPMWriter():
                         'devel': { 'Name': "devel",
                                    'Description': "Development files for %{name}.",
                                    'Summary': "Development files for %{name}",
-                                   'Group': "Development/Libraries",
                                    'AutoDepend': "True",
                                   },
                         'docs': { 'Name': "docs",
                                    'Description': "Documentation files for %{name}.",
                                    'Summary': "Documentation files for %{name}",
-                                   'Group': "Development/Libraries",
                                    'AutoDepend': "True",
                                 },
                         'lang': { 'Name': "lang",
                                    'Description': "Translation files for %{name}.",
                                    'Summary': "Translation files for %{name}",
-                                   'Group': "Development/Libraries",
                                    'AutoDepend': "True",
                                  },
                         # Used when package doesn't match any of the above.
                         'unknown': { 'Name': "unknown",
                                    'Description': "Files for %{name}.",
                                    'Summary': "Files for %{name}",
-                                   'Group': "Development/Libraries",
                                    'AutoDepend': "True",
                                    },
                     }
